@@ -88,7 +88,7 @@ event_mgr_ref(Node) ->
   {ok, State :: #state{}} |
   {ok, State :: #state{}, hibernate} |
   {error, Reason :: term()}).
-init([State0]) ->
+init(State0) ->
   ActiveView = lashup_hyparview_membership:get_active_view(),
   PassiveView = lashup_hyparview_membership:get_passive_view(),
   State1 = State0#state{passive_view = PassiveView, active_view = ActiveView},
